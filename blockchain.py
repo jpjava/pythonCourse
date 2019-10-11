@@ -15,12 +15,16 @@ def get_user_input():
 
 tx_amount = get_user_input()
 add_value(tx_amount)
-add_value(last_value=getLastValue(),tranV=3)
-add_value(10.98, getLastValue())
+#add_value(last_value=getLastValue(),tranV=3)
+#add_value(10.98, getLastValue())
 
-#output the blockchain
-for block in blockchain:
-	print('Outputting Block')
-	print(block)
+while True:
+	tx_amount = get_user_input()
+	add_value(last_value=getLastValue(),tranV=3)
+
+	#output the blockchain
+	for block in blockchain:
+		print('Outputting Block')
+		print(block)
 
 print('Done!')
