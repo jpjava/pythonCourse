@@ -3,6 +3,8 @@ blockchain = [] #make an array
 
 def getLastValue():
 	"""Returns the last value of the current blockchain """
+	if len(blockchain)<1:
+		return None
 	return blockchain[-1]
 
 def add_value(tranV, last_value=[1]):
@@ -32,9 +34,12 @@ while True:
 		tx_amount= get_transaction_value()
 		add_value(tx_amount, getLastValue())
 	elif user_choice == '2':
-		print_blockchain_elements()		
+		print_blockchain_elements()
+	elif user_choice == 'q':
+		break		
 	else:
 		print('Input was invalid, please pick a value from the list!')
+	
 	
 
 
